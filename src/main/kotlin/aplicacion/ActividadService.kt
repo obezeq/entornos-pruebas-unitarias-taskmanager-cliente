@@ -188,18 +188,12 @@ class ActividadService(
 
     // Gestión de usuarios
     fun crearUsuario(nombre: String, email: String): Usuario {
-        try {
-            require(nombre.isNotBlank()) { "Nombre no puede estar vacío" }
-            require(email.isNotBlank()) { "Email no puede estar vacío" }
-            require(Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$").matches(email)) { "Correo incorrecto - Formato erróneo" }
+        require(nombre.isNotBlank()) { "Nombre no puede estar vacío" }
+        require(email.isNotBlank()) { "Email no puede estar vacío" }
+        require(Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$").matches(email)) { "Correo incorrecto" }
 
-            val usuario = Usuario(0, nombre, email)
-            userRepository.agregar(usuario)
-
-        } catch (e: Exception) {
-            Logger.error("Error en crearUsuario(): ${e.javaClass.simpleName} - ${e.message}")
-            println("[-] Error crítico: Consulte logs para detalles")
-        }
+        val usuario = Usuario(0, nombre, email)
+        userRepository.agregar(usuario)
         return userRepository.listar().last()
     }
 

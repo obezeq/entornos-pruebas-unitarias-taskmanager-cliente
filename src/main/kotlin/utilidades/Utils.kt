@@ -36,7 +36,7 @@ object Utils {
 
     /* Caracteristica adicional añadida para validar emails*/
     fun validarEmail(email: String): Boolean {
-        val regex = "^[A-Za-z0-9+_.-]+@(.+)\$".toRegex()
+        val regex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$".toRegex()
         return regex.matches(email)
     }
 }

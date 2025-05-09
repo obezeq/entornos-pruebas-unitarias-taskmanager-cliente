@@ -1,7 +1,7 @@
 package es.prog2425.taskmanager.dominio
 
 abstract class Actividad(
-    val id: Long,
+    var id: Long,
     private val fechaCreacion: String,
     val descripcion: String,
     val etiquetas: List<String> = emptyList()
