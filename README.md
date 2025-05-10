@@ -73,6 +73,8 @@ class ActividadServiceTest : DescribeSpec({
 ./gradlew test
 ```
 
+![Ejecución de gradlew test](https://raw.githubusercontent.com/obezeq/entornos-pruebas-unitarias-taskmanager-cliente/refs/heads/master/img/gradlew-running.png)
+
 **Reporte Final:**
 | Total Tests | Pasaron | Fallaron | Tiempo |
 |-------------|---------|----------|--------|
@@ -83,6 +85,8 @@ class ActividadServiceTest : DescribeSpec({
 BUILD SUCCESSFUL in 14s
 5 actionable tasks: 2 executed, 3 up-to-date
 ```
+
+![gradlew test satisfactorio](https://raw.githubusercontent.com/obezeq/entornos-pruebas-unitarias-taskmanager-cliente/refs/heads/master/img/gradlew-test-successful.png)
 
 ---
 
